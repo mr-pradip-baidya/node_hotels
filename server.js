@@ -1,5 +1,4 @@
-
-// Hello World
+require("dotenv").config();
 
 const express = require("express");
 const app = express();
@@ -25,6 +24,6 @@ const menuRoutes = require("./routes/menuRoutes")
 app.use("/person", personRoutes);
 app.use("/menu", menuRoutes);
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log(`Server running at http://localhost:3000`);
 });
